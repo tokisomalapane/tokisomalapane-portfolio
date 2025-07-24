@@ -1,0 +1,239 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+}
+
+/* Old Money Color Palette */
+@layer utilities {
+  .bg-cream-50 { background-color: #fefdf8; }
+  .bg-cream-100 { background-color: #fdf8f0; }
+  .text-cream-100 { color: #fdf8f0; }
+  .text-cream-200 { color: #f5f0e8; }
+  .text-cream-300 { color: #ede4d3; }
+  
+  .bg-blue-400 { background-color: #3b82f6; }
+  .bg-blue-600 { background-color: #2563eb; }
+  .bg-blue-700 { background-color: #1d4ed8; }
+  .bg-blue-800 { background-color: #1e40af; }
+  .text-blue-400 { color: #60a5fa; }
+  .text-blue-600 { color: #2563eb; }
+  .text-blue-700 { color: #1d4ed8; }
+  .border-blue-400 { border-color: #60a5fa; }
+  .border-blue-600 { border-color: #2563eb; }
+  .border-blue-700 { border-color: #1d4ed8; }
+  
+  .text-navy-700 { color: #1e3a8a; }
+  .text-navy-800 { color: #1e40af; }
+  .text-navy-900 { color: #1e293b; }
+  .bg-navy-600 { background-color: #1e40af; }
+  .bg-navy-700 { background-color: #1e3a8a; }
+  .bg-navy-800 { background-color: #1e293b; }
+  .border-navy-700 { border-color: #1e3a8a; }
+  
+  .font-serif { 
+    font-family: 'Times New Roman', 'Times', 'Georgia', 'Baskerville', serif;
+    font-weight: 600;
+  }
+  .font-body { 
+    font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+    font-weight: 400;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom animations with old-money elegance */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px); 
+    opacity: 0.2;
+  }
+  25% { 
+    transform: translateY(-12px) translateX(8px); 
+    opacity: 0.6;
+  }
+  50% { 
+    transform: translateY(-20px) translateX(-4px); 
+    opacity: 0.8;
+  }
+  75% { 
+    transform: translateY(-12px) translateX(-8px); 
+    opacity: 0.6;
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+/* Elegant glow effect */
+.glow {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
+}
+
+/* Refined transitions */
+* {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Elegant card hover effects */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Sophisticated background pattern */
+@keyframes circuit-move {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(15px, 15px); }
+}
+
+.circuit-pattern {
+  animation: circuit-move 30s linear infinite;
+}
+
+/* Typography refinements */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', 'Times', 'Georgia', 'Baskerville', serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+p, span, div {
+  font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+/* Button refinements */
+button {
+  font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+}
+
+/* Mobile menu animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-enter {
+  animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+/* Elegant focus states */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid rgba(59, 130, 246, 0.3);
+  outline-offset: 2px;
+}
+
+/* Refined scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.5);
+}
+
+/* Enhanced old-money typography styles */
+.heading-primary {
+  font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.heading-secondary {
+  font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.text-elegant {
+  font-family: 'Times New Roman', 'Times', 'Georgia', serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.8;
+}
+
+/* Sophisticated text shadows for elegance */
+.text-shadow-elegant {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
