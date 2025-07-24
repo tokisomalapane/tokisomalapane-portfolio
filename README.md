@@ -283,9 +283,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-Tokiso Malapane - [your.email@example.com](mailto:your.email@example.com)
+Tokiso Malapane - [your.email@example.com](mailto:tukimalapane@gmail.com)
 
-Project Link: [https://github.com/tokiso-malapane/portfolio](https://github.com/tokiso-malapane/portfolio)
+Project Link: [https://github.com/tokiso-malapane/portfolio](https://github.com/tokiso-malapane/tokisomalapane-portfolio)
 
 ---
 
